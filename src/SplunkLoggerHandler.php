@@ -21,9 +21,10 @@ class SplunkLoggerHandler extends AbstractProcessingHandler
 
         Http::withHeaders([
             'Authorization' => 'Splunk ' . $splunkConfiguration['SPLUNK_TOKEN'],
-        ])
-            ->withOptions([
-                'verify' => $splunkConfiguration['SPLUNK_VERIFY'],
-            ])->post($splunkConfiguration['SPLUNK_URL'], $payload);
+        ])->withOptions([
+			'verify' => $splunkConfiguration['SPLUNK_SSL_VERIFY'],
+		])->post(
+			$splunkConfiguration['SPLUNK_URL'], $payload
+		);
     }
 }
