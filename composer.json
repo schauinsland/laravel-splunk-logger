@@ -4,6 +4,12 @@
     "type": "library",
     "license": "MIT",
     "keywords": ["laravel", "splunk", "logger", "driver", "logging", "schauinsland","schauinsland-reisen", "slr"],
+    "authors": [
+        {
+            "name": "Gent Uka",
+            "email": "gent.uka@schauinsland-reisen.de"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "Schauinsland\\SplunkLogger\\": "src/"

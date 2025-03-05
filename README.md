@@ -11,7 +11,6 @@
     * [Splunk Configuration](#splunk-configuration)
     * [Example .env](#example-env)
   * [Usage](#usage)
-  * [Output Example](#output-example)
   * [Bug report or Feature request](#bug-report-or-feature-request)
   * [Want to Contribute?](#want-to-contribute)
   * [Code of Conduct](#code-of-conduct)
@@ -98,6 +97,7 @@ try {
 For more custom logging options, refer to the [Laravel Logging Documentation](https://laravel.com/docs/11.x/logging#writing-log-messages).
 
 ## Output Example
+
 ```json
 {
   "message":"This is a custom Error",
