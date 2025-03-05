@@ -21,5 +21,8 @@
                 "Schauinsland\\SplunkLogger\\ServiceProvider"
             ]
         }
-    }
+    },
+  "require": {
+    "ext-json": "*"
+  }
 }
