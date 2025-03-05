@@ -116,6 +116,24 @@ For more custom logging options, refer to the [Laravel Logging Documentation](ht
 }
 ```
 
+## Publish Configuration (Optional)
+
+By default, the configuration is automatically merged into logging.php. However, you can still publish the configuration file to the config directory if needed. To publish the configuration, run:
+```bash
+php artisan vendor:publish --provider=Schauinsland\\SplunkLogger\\ServiceProvider
+```
+
+After publishing, update your `logging.php` configuration file to include the published settings:
+```php
+return [
+    'channels' => [
+        'splunk' => (require config_path('laravel-splunk-logger.php'))['splunk'],
+    ],
+    // Other channels...
+];
+```
+
+
 ## Bug report or Feature request
 
 If you encounter a bug or have a feature request, please [create an issue](https://github.com/schauinsland/laravel-splunk-logger/issues).
