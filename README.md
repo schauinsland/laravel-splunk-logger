@@ -11,6 +11,7 @@
     * [Splunk Configuration](#splunk-configuration)
     * [Example .env](#example-env)
   * [Usage](#usage)
+  * [Output Example](#output-example)
   * [Bug report or Feature request](#bug-report-or-feature-request)
   * [Want to Contribute?](#want-to-contribute)
   * [Code of Conduct](#code-of-conduct)
@@ -95,6 +96,24 @@ try {
 ```
 
 For more custom logging options, refer to the [Laravel Logging Documentation](https://laravel.com/docs/11.x/logging#writing-log-messages).
+
+## Output Example
+```json
+{
+  "message":"This is a custom Error",
+  "context": {
+    "user_id":1,
+    "name":"John Doe",
+    "email":"john@doe.com",
+    "is_admin":false
+  },
+  "level":400,
+  "level_name":"ERROR",
+  "channel":"Laravel",
+  "datetime":"2025-03-05T11:35:46.111298+00:00",
+  "extra":[]
+}
+```
 
 ## Bug report or Feature request
 
