@@ -12,6 +12,7 @@
     * [Example .env](#example-env)
   * [Usage](#usage)
   * [Output Example](#output-example)
+  * [Publish Configuration (Optional)](#publish-configuration-optional)
   * [Bug report or Feature request](#bug-report-or-feature-request)
   * [Want to Contribute?](#want-to-contribute)
   * [Code of Conduct](#code-of-conduct)
@@ -33,6 +34,7 @@ The library automatically merges with Laravel's `config/logging.php`, eliminatin
 
 - **Captures All Laravel Errors in Debug Mode**:
 Automatically logs all Laravel exceptions and errors to Splunk when the application is in debug mode, providing comprehensive error insights during development.
+Additionally, it is possible and optional to merge the configuration manually if needed. For more details, see [Publish Configuration (Optional)](#publish-configuration-optional).
 
 ## Installation
 
@@ -115,6 +117,24 @@ For more custom logging options, refer to the [Laravel Logging Documentation](ht
   "extra":[]
 }
 ```
+
+## Publish Configuration (Optional)
+
+By default, the configuration is automatically merged into logging.php. However, you can still publish the configuration file to the config directory if needed. To publish the configuration, run:
+```bash
+php artisan vendor:publish --provider=Schauinsland\\SplunkLogger\\ServiceProvider
+```
+
+After publishing, update your `logging.php` configuration file to include the published settings:
+```php
+return [
+    'channels' => [
+        'splunk' => (require config_path('laravel-splunk-logger.php'))['splunk'],
+    ],
+    // Other channels...
+];
+```
+
 
 ## Bug report or Feature request
 
