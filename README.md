@@ -12,6 +12,7 @@
     * [Example .env](#example-env)
   * [Usage](#usage)
   * [Output Example](#output-example)
+  * [Publish Configuration (Optional)](#publish-configuration-optional)
   * [Bug report or Feature request](#bug-report-or-feature-request)
   * [Want to Contribute?](#want-to-contribute)
   * [Code of Conduct](#code-of-conduct)
@@ -33,6 +34,7 @@ The library automatically merges with Laravel's `config/logging.php`, eliminatin
 
 - **Captures All Laravel Errors in Debug Mode**:
 Automatically logs all Laravel exceptions and errors to Splunk when the application is in debug mode, providing comprehensive error insights during development.
+Additionally, it is possible and optional to merge the configuration manually if needed. For more details, see [Publish Configuration (Optional)](#publish-configuration-optional).
 
 ## Installation
 
