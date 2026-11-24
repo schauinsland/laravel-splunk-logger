@@ -116,6 +116,15 @@ For more custom logging options, refer to the [Laravel Logging Documentation](ht
 }
 ```
 
+## Upgrading from 1.1.x
+
+Releases 1.1.x used the namespace `Schauinsland\SplunkLogging`. The namespace is now `Schauinsland\SplunkLogger`.
+The old class names still work but are deprecated, so update references such as the `via` entry in your `config/logging.php`:
+
+```php
+'via' => \Schauinsland\SplunkLogger\SplunkLogger::class,
+```
+
 ## Bug report or Feature request
 
 If you encounter a bug or have a feature request, please [create an issue](https://github.com/schauinsland/laravel-splunk-logger/issues).
