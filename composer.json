@@ -12,7 +12,8 @@
     ],
     "autoload": {
         "psr-4": {
-            "Schauinsland\\SplunkLogger\\": "src/"
+            "Schauinsland\\SplunkLogger\\": "src/",
+            "Schauinsland\\SplunkLogging\\": "compat/"
         }
     },
     "extra": {
